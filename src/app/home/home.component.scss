@@ -1,0 +1,22 @@
+
+.movies_container{
+  margin-top: -100px;
+  overflow: hidden;
+
+  .movie_card_container{
+    display: flex;
+    gap: 5px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+
+    .movie_card{
+      width: 200px;
+      height: 100px;
+      text-align: center;
+      
+      background-color: #fff;
+      color: #080808;
+      border-radius: 5px;
+    }
+  }
+}
