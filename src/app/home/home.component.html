@@ -1,13 +1,39 @@
 <div class="movies_container" >
   <h1>les meilleurs films de l'année</h1>
-  <div class="movie_card_container">
-    <div class="movie_card"></div>
-    <div class="movie_card"></div>
-    <div class="movie_card"></div>
-    <div class="movie_card"></div>
-    <div class="movie_card"></div>
-    <div class="movie_card"></div>
-    <div class="movie_card"></div>
-    <div class="movie_card"></div>
+  <div class="movie_card_container" >
+    <div class="movie_card" *ngFor="let movie of movies | paginate: { itemsPerPage: 5, currentPage: pages }">
+
+      <img [src]="'https://image.tmdb.org/t/p/w500/'+movie.backdrop_path" alt="" width="200px">
+
+      <div class="card_body">
+
+        <div class="btn_container">
+          <button class="btn play_btn"> <mat-icon>play_arrow</mat-icon></button>
+          <div class="btn play_btn"><mat-icon>done</mat-icon></div>
+          <div class="btn play_btn"><mat-icon>thumb_up_outline</mat-icon></div>
+        </div>
+      </div>
+    </div>
   </div>
+  <pagination-controls (pageChange)="pages = $event"></pagination-controls>
+</div>
+
+<div class="movies_container2" >
+  <h1>Nouvelles sortie</h1>
+  <div class="movie_card_container" >
+    <div class="movie_card" *ngFor="let movie of movies2 ">
+
+      <img [src]="'https://image.tmdb.org/t/p/w500/'+movie.backdrop_path" alt="" width="200px">
+
+      <div class="card_body">
+
+        <div class="btn_container">
+          <button class="btn play_btn"> <mat-icon>play_arrow</mat-icon></button>
+          <div class="btn play_btn"><mat-icon>done</mat-icon></div>
+          <div class="btn play_btn"><mat-icon>thumb_up_outline</mat-icon></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </div>

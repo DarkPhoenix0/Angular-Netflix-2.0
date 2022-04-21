@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { catchError, Observable, tap, throwError } from 'rxjs';
-import { IMovie } from './Movies_interface';
+import { environment } from 'src/environments/environment';
 
 
 @Injectable({
@@ -9,17 +9,27 @@ import { IMovie } from './Movies_interface';
 })
 export class MoviesService {
 
-  private movies_api_url = 'https://api.themoviedb.org/3/movie/popular?api_key=958f51dbf188c794e7faad23ae1ed6ff&language=en-US&page=1';
+  private key = environment.api_key
+
+  private movies_api_url = 'https://api.themoviedb.org/3/movie/popular?api_key='+this.key+'&language=en-US&page=1';
+  private movies_api_url2 = 'https://api.themoviedb.org/3/movie/popular?api_key='+this.key+'&language=en-US&page=2';
 
   constructor(private http : HttpClient) { }
 
-  public getMovies():Observable<IMovie[]>{
-    return this.http.get<IMovie[]>(this.movies_api_url)
-    // .pipe(
-    //   tap(movie => console.log('Movies : ', movie)),
-    //   catchError(this.handleError)
-    // )
+  public getMovies():Observable<any>{
+    return this.http.get<any>(this.movies_api_url)
+    .pipe(
+      tap(movie => console.log('Movies : ', movie)),
+      catchError(this.handleError)
+    )
+  }
 
+  public getMovies2():Observable<any>{
+    return this.http.get<any>(this.movies_api_url2)
+    .pipe(
+      tap(movie => console.log('Movies : ', movie)),
+      catchError(this.handleError)
+    )
   }
 
   private handleError(error: HttpErrorResponse) {

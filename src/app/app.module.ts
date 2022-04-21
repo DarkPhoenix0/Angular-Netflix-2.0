@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { NgModel } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
+import { AvatarModule } from 'ngx-avatar';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -24,6 +26,7 @@ import { HomeComponent } from './home/home.component';
     MatIconModule,
     MoviesModuleModule,
     HttpClientModule,
+    NgxPaginationModule,
 
     AppRoutingModule
   ],

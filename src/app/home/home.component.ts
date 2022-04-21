@@ -11,7 +11,9 @@ import { IMovie } from '../Movies_interface';
 export class HomeComponent implements OnInit {
 
   public movies : IMovie[] = []
+  public movies2 : IMovie[] = []
   public errMsg = ''
+  public pages = this.movies.length
 
   constructor(private movieService : MoviesService) {
 
@@ -19,15 +21,21 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.getMovies()
+    this.getMovies2()
+    console.log(this.movies);
   }
 
   getMovies(){
     this.movieService.getMovies().subscribe({
-      next : movies => console.log(movies),
-      error : err => console.log(err),
+      next : movies => this.movies.push(...movies.results),
     })
   }
 
+  getMovies2(){
+    this.movieService.getMovies2().subscribe({
+      next : movies => this.movies2.push(...movies.results),
+    })
+  }
 }
 
 
