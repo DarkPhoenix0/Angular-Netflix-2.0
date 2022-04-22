@@ -1,7 +1,8 @@
 
 .movies_container, .movies_container2{
-  margin-top: -100px;
+
   overflow: hidden;
+  margin: -100px 50px 20px 50px;
 
   .movie_card_container{
     display: flex;
@@ -13,10 +14,10 @@
     .movie_card{
       display: flex;
       flex-direction: column;
-      width: 200px;
+      width: 250px;
       text-align: center;
       overflow: hidden;
-      border-radius: 5px;
+      border-radius: 3px;
       transition: .35s ease;
       background-color: #161616;
       padding: 0;

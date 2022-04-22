@@ -11,8 +11,8 @@ export class MoviesService {
 
   private key = environment.api_key
 
-  private movies_api_url = 'https://api.themoviedb.org/3/movie/popular?api_key='+this.key+'&language=en-US&page=1';
-  private movies_api_url2 = 'https://api.themoviedb.org/3/movie/popular?api_key='+this.key+'&language=en-US&page=2';
+  private movies_api_url = 'https://api.themoviedb.org/3/movie/popular?api_key='+this.key+'&language=fr-FR&page=1';
+  private movies_api_url2 = 'https://api.themoviedb.org/3/movie/popular?api_key='+this.key+'&language=fr-FR&page=2';
 
   constructor(private http : HttpClient) { }
 
@@ -30,6 +30,10 @@ export class MoviesService {
       tap(movie => console.log('Movies : ', movie)),
       catchError(this.handleError)
     )
+  }
+
+  public getMovie(id:number){
+    return this.http.get<any>('https://api.themoviedb.org/3/movie/'+id+'?api_key='+this.key+'&language=fr-FR&page=1')
   }
 
   private handleError(error: HttpErrorResponse) {

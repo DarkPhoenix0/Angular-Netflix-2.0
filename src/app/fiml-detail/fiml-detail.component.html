@@ -1,0 +1,17 @@
+<app-navbar></app-navbar>
+<!-- <app-banner [movie]="movie"></app-banner> -->
+
+<div class="detail_container">
+  <div class="poster_card">
+    <img [src]="'https://image.tmdb.org/t/p/w500/'+movie.poster_path" alt="" height="600">
+  </div>
+  <div class="detail_card">
+    <h1>{{movie.title | titlecase}} {{movie.release_date.split('-')[0]}}</h1>
+    <div class="btn_action">
+      <button class="play"><mat-icon>play_arrow</mat-icon> Play</button>
+    </div>
+    <h2>Synopsis</h2>
+    <p>{{movie.overview}}</p>
+    <strong>{{movie.genre_ids}}</strong>
+  </div>
+</div>

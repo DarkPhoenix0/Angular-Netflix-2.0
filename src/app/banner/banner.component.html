@@ -1,0 +1,13 @@
+<div class="hero_baner" >
+
+  <div class="hero_info">
+    <h1 class="hero_title">
+      {{movie.title? movie.title : 'MORTAL KOMBA'}}
+    </h1>
+    <p class="hero_detail">{{!movie.overview?'Lorem ipsum dolor sit amet consectetur adipisicing elit.' : (movie.overview | slice:0:50) + '...'}}</p>
+    <div class="hero_btn">
+      <button class="play_btn"> <mat-icon>play_arrow</mat-icon> Lire</button>
+      <button class="more_info_btn"><mat-icon>info</mat-icon>Plus d'info</button>
+    </div>
+  </div>
+</div>

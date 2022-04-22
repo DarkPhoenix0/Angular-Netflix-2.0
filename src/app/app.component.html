@@ -1,49 +1,9 @@
-<div class="hero_baner">
-  <nav class="nav_bar">
-    <div class="right_side">
-      <img src="../assets/images/netflix_logo.png" alt="" class="logo" width="100px">
-      <ul class="links">
-        <li  routerLinkActive="active">
-          <a [routerLink]="['/home']">Accueil</a>
-        </li>
-        <li  routerLinkActive="active">
-          <a [routerLink]="['series']">Série</a>
-        </li>
-        <li  routerLinkActive="active">
-          <a [routerLink]="['fimls']">Films</a>
-        </li>
-        <li  routerLinkActive="active">
-          <a [routerLink]="['nouveaux_films']">Nouveautés</a>
-        </li>
-        <li routerLinkActive="active">
-          <a [routerLink]="['ma_liste']">Ma liste</a>
-        </li>
-      </ul>
-    </div>
-
-    <div class="left_side">
-      <mat-icon aria-hidden="false" aria-label="Example home icon">search</mat-icon>
-      <mat-icon>notifications</mat-icon>
-    </div>
-  </nav>
-
-  <div class="hero_info">
-    <h1 class="hero_title">
-      MORTAL KOMBA
-    </h1>
-    <p class="hero_detail">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-    <div class="hero_btn">
-      <button class="play_btn"> <mat-icon>play_arrow</mat-icon> Lire</button>
-      <button class="more_info_btn"><mat-icon>info</mat-icon>Plus d'info</button>
-    </div>
-  </div>
-</div>
 
 <div class="main">
   <router-outlet></router-outlet>
 </div>
 
 <footer>
-  
+
 </footer>
 

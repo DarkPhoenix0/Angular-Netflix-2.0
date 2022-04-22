@@ -15,6 +15,8 @@ export class HomeComponent implements OnInit {
   public errMsg = ''
   public pages = this.movies.length
 
+  movieID = 1
+
   constructor(private movieService : MoviesService) {
 
   }
@@ -36,6 +38,8 @@ export class HomeComponent implements OnInit {
       next : movies => this.movies2.push(...movies.results),
     })
   }
+
+
 }
 
 

@@ -11,12 +11,18 @@ import {MatIconModule} from '@angular/material/icon'
 import { MoviesModuleModule } from './movies/movies-module.module';
 import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './home/home.component';
+import { FimlDetailComponent } from './fiml-detail/fiml-detail.component';
+import { BannerComponent } from './banner/banner.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
+    FimlDetailComponent,
+    BannerComponent,
+    NavbarComponent,
 
   ],
   imports: [
@@ -27,8 +33,9 @@ import { HomeComponent } from './home/home.component';
     MoviesModuleModule,
     HttpClientModule,
     NgxPaginationModule,
-
-    AppRoutingModule
+    AvatarModule,
+    AppRoutingModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

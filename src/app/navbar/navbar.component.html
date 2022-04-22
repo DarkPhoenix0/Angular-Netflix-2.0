@@ -1,0 +1,28 @@
+<nav class="nav_bar">
+  <div class="right_side">
+    <img src="../assets/images/netflix_logo.png" alt="" class="logo" width="120px">
+    <ul class="links">
+      <li  routerLinkActive="active">
+        <a [routerLink]="['/home']">Accueil</a>
+      </li>
+      <li  routerLinkActive="active">
+        <a [routerLink]="['series']">Série</a>
+      </li>
+      <li  routerLinkActive="active">
+        <a [routerLink]="['fimls']">Films</a>
+      </li>
+      <li  routerLinkActive="active">
+        <a [routerLink]="['nouveaux_films']">Nouveautés</a>
+      </li>
+      <li routerLinkActive="active">
+        <a [routerLink]="['ma_liste']">Ma liste</a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="left_side">
+    <mat-icon aria-hidden="false" aria-label="Example home icon">search</mat-icon>
+    <mat-icon>notifications</mat-icon>
+    <ngx-avatar src="../assets/images/avatar.png" size="30">A</ngx-avatar>
+  </div>
+</nav>
