@@ -14,6 +14,7 @@ import { HomeComponent } from './home/home.component';
 import { FimlDetailComponent } from './fiml-detail/fiml-detail.component';
 import { BannerComponent } from './banner/banner.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { LoginPageComponent } from './login-page/login-page.component';
 
 
 @NgModule({
@@ -23,6 +24,7 @@ import { NavbarComponent } from './navbar/navbar.component';
     FimlDetailComponent,
     BannerComponent,
     NavbarComponent,
+    LoginPageComponent,
 
   ],
   imports: [

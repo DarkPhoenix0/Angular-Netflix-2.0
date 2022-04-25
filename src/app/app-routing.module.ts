@@ -6,11 +6,13 @@ import { FilmsComponent } from './films/films.component';
 import { FavoritComponent } from './favorit/favorit.component';
 import { HomeComponent } from './home/home.component';
 import { FimlDetailComponent } from './fiml-detail/fiml-detail.component';
+import { LoginPageComponent } from './login-page/login-page.component';
 
 
 const routes: Routes = [
-  {path:'home', component:HomeComponent},
+  {path:'login', component:LoginPageComponent},
   {path:'', component:HomeComponent},
+  {path:'home', component:HomeComponent},
   {path:'series', component:SerieComponent},
   {path:'nouveaux_films', component:NewFilmsComponent},
   {path:'fimls', component:FilmsComponent},

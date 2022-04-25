@@ -1,0 +1,85 @@
+.login_page{
+  height: 100vh;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)),center/cover no-repeat url('../../assets/images/website_large.jpg');
+
+
+  .login_form{
+    height: 80vh;
+    width: 450px;
+    background-color: rgba(0, 0, 0, .8);
+    margin: 0 auto;
+    color: #fff;
+
+    .main_container{
+      display: flex;
+      flex-direction: column;
+      margin: 50px;
+
+      color: rgb(79, 79, 79);
+
+
+      h1{
+        font-weight: 700;
+        font-size: 3em;
+        text-align: left;
+        margin-top: 50px;
+        color: #fff;
+      }
+
+      .input_block{
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+
+        input{
+          height: 50px;
+          background-color: #333;
+          font-size: 18px;
+          border: 1px solid transparent;
+          appearance: none;
+          border-radius: 3px;
+          outline: none;
+          color: #fff;
+          padding: 0 10px;
+
+          &:focus{
+            border: solid 1px #fff;
+          }
+        }
+
+      }
+      .btn_block{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        font-size: 16px;
+
+        button{
+
+          border: none;
+          border-radius: 3px;
+          margin-top: 60px;
+          padding: .5em 0;
+          font-size: 1.5em;
+          font-weight: 700;
+
+          background-color: red;
+          color: #fff;
+        }
+        a{
+          color: inherit;
+          text-decoration: none;
+        }
+
+        strong a{
+
+          color: #fff;
+          &:hover{
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+
+  }
+}
